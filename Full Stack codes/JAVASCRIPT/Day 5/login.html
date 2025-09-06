@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(72, 69, 69);
+            font-family: Arial;
+        }
+        .login-box{
+            background-color: rgb(255, 255, 255);
+            padding: 30px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+        }
+        input{
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0px ;
+            border: 1px solid grey;
+            border-radius: 5px;
+            
+        }
+        button{
+            width: 100px;
+            padding: 10px;
+            background-color: rgb(30, 99, 202);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+
+        }
+        button:hover{
+            background: darkblue;
+            transform:scale(1.05);
+        }
+        .error{
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="login-box">
+        <h2>Login</h2>
+        <form  id="loginform">
+            <input type="text"id="username"placeholder="username" required>
+            <input type="password"id="password"placeholder="password"required>
+            <p class="error"id="errorMsg"></p>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <script>
+        let form1=document.getElementById("loginform");
+        let password1=document.getElementById("password");
+        let errorMsg=document.getElementById("errorMsg");
+
+        form1.addEventListener("submit",function(event){
+            event.preventDefault();//stop page refresh
+        
+        if(password1.value.length<8){
+            errorMsg.textContent="Password must be at least 8 characters!"
+        }
+        else{
+            errorMsg.textContent="";
+            alert("Login Successful!")
+        }
+    });
+
+    </script>
+</body>
+</html>

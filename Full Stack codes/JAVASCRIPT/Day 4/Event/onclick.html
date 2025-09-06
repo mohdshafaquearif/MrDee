@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            background-color: green;
+            height: 40px;
+            width: 90px;
+            border: 2px solid red;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">Submit</button>
+      <!--<button onclick="alert('buttonclicked')">Submit</button> -->
+    <script>
+       //addeventlistener
+     document.getElementById("btn").addEventListener("click",function(){
+        alert("Hi");
+     })
+    </script>
+</body>
+</html>
