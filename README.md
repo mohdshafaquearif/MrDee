@@ -1,2 +1,2 @@
 # MrDee
-Here it is for GitHub learning
+Here it is for GitHub learning for DevOps
